@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = async (props: Props) => {
   return (
     <div>Navbar</div>
   )
