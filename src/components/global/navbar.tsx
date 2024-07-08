@@ -51,6 +51,9 @@ const Navbar = async (props: Props) => {
             true ? 'Dashboard' : 'Get Started'}
           </span>
         </Link>
+        { //WIP WIRE UP USER
+        
+        }
         
       
       </aside>
