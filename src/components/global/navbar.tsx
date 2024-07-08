@@ -9,7 +9,7 @@ const Navbar = async (props: Props) => {
     <aside className="flex items-center gap-[2px]">
       <p className="text-3xl font-bold">Auto</p>
       <Image
-        src="/fuzzieLogo.png"
+        src="/AutomatexLogo.png"
         width={15}
         height={15}
         alt="automatex logo"
