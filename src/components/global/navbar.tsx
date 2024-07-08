@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from '../../../node_modules/next/image'
 import Link from '../../../node_modules/next/link'
+import { MenuIcon } from 'lucide-react'
 type Props = {}
 
 const Navbar = async (props: Props) => {
@@ -52,8 +53,9 @@ const Navbar = async (props: Props) => {
           </span>
         </Link>
         { //WIP WIRE UP USER
-        
+
         }
+        <MenuIcon className='md:hidden' />
         
       
       </aside>
