@@ -1,6 +1,7 @@
 import { ContainerScroll } from "@/components/global/container-scroll-animation";
 import Navbar from "@/components/global/navbar";
-import { Divide } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 
 
 export default function Home() {
@@ -12,8 +13,12 @@ export default function Home() {
         <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
         
         <ContainerScroll 
-          title={
-            <div className="flex items-center justify-center flex-col"></div>
+          titleComponent={
+            <div className="flex items-center justify-center flex-col">
+              <Button>
+
+              </Button>
+            </div>
           }
         >
           
