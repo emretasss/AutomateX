@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { clients,products } from '../lib/constans'
 import { HeroParallax } from "@/components/global/connect-parallax";
+import { LampComponent } from "@/components/global/lamp";
 export default function Home() {
   return (
     <main className="flex items-center justify-center flex-col">
@@ -39,6 +40,11 @@ export default function Home() {
       />
       <section>
         <HeroParallax products={products}></HeroParallax>
+      </section>
+      <section className="mt-[-500px]">
+        <LampComponent />
+          
+          
       </section>
 
    </main>
