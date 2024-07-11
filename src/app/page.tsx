@@ -4,7 +4,7 @@ import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { clients,products } from '../lib/constans'
-
+import { HeroParallax } from "@/components/global/connect-parallax";
 export default function Home() {
   return (
     <main className="flex items-center justify-center flex-col">
