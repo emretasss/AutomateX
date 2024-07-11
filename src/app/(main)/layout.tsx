@@ -2,8 +2,10 @@ import React from 'react'
 
 type Props = {}
 
-const layout = (props: Props) => {
+const Layout = (props: Props) => {
   return (
-    <div>layout</div>
+    <div>Layout</div>
   )
 }
+
+export default Layout 
