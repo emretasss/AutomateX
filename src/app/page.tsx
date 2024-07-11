@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
+import { clients } from '../lib/constans'
 
 export default function Home() {
   return (
@@ -34,8 +34,12 @@ export default function Home() {
       
 
 
-
-            <InfiniteMovingCards />
+      <InfiniteMovingCards
+        className="md:mt-[18rem] mt-[-100px]"
+        items={clients}
+        direction="right"
+        speed="slow"
+      />
 
 
    </main>
