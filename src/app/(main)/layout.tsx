@@ -4,7 +4,7 @@ type Props = {}
 
 const Layout = (props: Props) => {
   return (
-    <div>Layout</div>
+    <div className='flex overflow-hidden h-screen'>Layout</div>
   )
 }
 
