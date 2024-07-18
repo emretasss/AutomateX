@@ -9,3 +9,4 @@ const MenuOptions = (props: Props) => {
     <div>MenuOptions</div>
   )
 }
+export default MenuOptions
