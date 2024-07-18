@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-const DasboardPage = (props: Props) => {
+
+const DasboardPage = () => {
   return (
     <div>DasboardPage</div>
   )
