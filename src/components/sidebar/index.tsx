@@ -10,9 +10,9 @@ const MenuOptions = (props: Props) => {
     const pathName =usePathname()
 
   return (
-   <div>
-    <h1>Menu Options</h1>
-   </div>
+    <nav>
+      
+    </nav>
   )
 }
 export default MenuOptions
