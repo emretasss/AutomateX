@@ -2,6 +2,12 @@
 
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 type Props = {}
 
@@ -11,7 +17,7 @@ const MenuOptions = (props: Props) => {
 
   return (
     <nav>
-      
+
     </nav>
   )
 }
