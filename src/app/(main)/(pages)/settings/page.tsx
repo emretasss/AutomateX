@@ -4,7 +4,7 @@ type Props = {}
 
 function Settings({}: Props) {
   return (
-    <div>Settings</div>
+    <div className='flex flex-col gap-4'>Settings</div>
   )
 }
 
