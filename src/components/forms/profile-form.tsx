@@ -1,11 +1,12 @@
 "use client"
 
 
-import React from 'react'
+import React, { useState } from 'react'
 
 type Props = {}
 
 const ProfileForm = (props: Props) => {
+    const [IsLoading, setIsLoading] = useState(false)
   return (
     <div>ProfileForm</div>
   )
