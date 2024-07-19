@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { clients,products } from '../lib/constans'
+import { clients,products } from '../lib/constant'
 import { HeroParallax } from "@/components/global/connect-parallax";
 import { LampComponent } from "@/components/global/lamp";
 
