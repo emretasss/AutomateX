@@ -1,24 +1,53 @@
+'use client'
 import React from 'react'
+import UploadCareButton from './uploadcare-button'
+import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { X } from 'lucide-react'
 
-type Props = {}
+type Props = {
+  userImage: string | null
+  onDelete?: any
+  onUpload: any
+}
 
-function Settings({}: Props) {
+const ProfilePicture = ({ userImage, onDelete, onUpload }: Props) => {
+  const router = useRouter()
+
+  const onRemoveProfileImage = async () => {
+    const response = await onDelete()
+    if (response) {
+      router.refresh()
+    }
+  }
+
   return (
-    <div className="flex flex-col gap-4">
-      <h1 className="sticky top-0 z-[10] flex items-center justify-between border-b bg-background/50 p-6 text-4xl backdrop-blur-lg">
-        <span>Settings</span>
-      </h1>
-      <div className="flex flex-col gap-10 p-6">
-        <div>
-          <h2 className="text-2xl font-bold">User Profile</h2>
-          <p className="text-base text-white/50">
-            Add or update your information
-          </p>
-        </div>
-        </div>
-        </div>
-
+    <div className="flex flex-col">
+      <p className="text-lg text-white"> Profile Picture</p>
+      <div className="flex h-[30vh] flex-col items-center justify-center">
+        {userImage ? (
+          <>
+            <div className="relative h-full w-2/12">
+              <Image
+                src={userImage}
+                alt="User_Image"
+                fill
+              />
+            </div>
+            <Button
+              onClick={onRemoveProfileImage}
+              className="bg-transparent text-white/70 hover:bg-transparent hover:text-white"
+            >
+              <X /> Remove Logo
+            </Button>
+          </>
+        ) : (
+          <UploadCareButton onUpload={onUpload} />
+        )}
+      </div>
+    </div>
   )
 }
 
-export default Settings
+export default ProfilePicture
