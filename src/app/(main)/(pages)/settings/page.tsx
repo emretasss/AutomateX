@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import UploadCareButton from './uploadcare-button'
+import UploadCareButton from './_components/uploadcare-button'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
