@@ -3,6 +3,7 @@ import {DM_Sans} from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 const font  = DM_Sans({ subsets: ["latin"] });
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+      <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -25,6 +27,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
+          </ClerkProvider>
       </body>
     </html>
   );
