@@ -1,4 +1,5 @@
 "use client"
+import '@uploadcare/react-uploader/core.css';
 
 import React from 'react'
 
