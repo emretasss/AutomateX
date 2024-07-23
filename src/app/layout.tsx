@@ -15,12 +15,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return (<ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    >  
     <html lang="en">
       <body className={font.className}>
-      <ClerkProvider
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-    >      <ThemeProvider
+          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
@@ -28,8 +28,8 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-          </ClerkProvider>
+          
       </body>
-    </html>
+    </html></ClerkProvider>
   );
 }
