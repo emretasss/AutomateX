@@ -92,13 +92,12 @@ export const Card = ({
     >
       <div className="bg-gray-100 h-full w-full rounded-2xl  gap-4 overflow-hidden p-4 transition-all ">
         <Image
-          src="/temp-banner.png"
+          src="/banner.png"
           fill
           alt="bannerImage"
           className="object-cover border-8 rounded-2xl"
         />
       </div>
     </motion.div>
-    
   )
 }

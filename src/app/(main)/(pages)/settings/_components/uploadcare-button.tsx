@@ -22,14 +22,24 @@ const UploadCareButton = ({ onUpload }: Props) => {
         router.refresh()
       }
     }
-    ctxProviderRef.current?.addEventListener('file-upload-success', handleUpload)
-  }, [])
+
+    if (ctxProviderRef.current) {
+      ctxProviderRef.current.addEventListener('file-upload-success', handleUpload)
+    }
+
+    // Удаляем обработчик события при размонтировании компонента
+    return () => {
+      if (ctxProviderRef.current) {
+        ctxProviderRef.current.removeEventListener('file-upload-success', handleUpload)
+      }
+    }
+  }, [onUpload, router])
 
   return (
     <div>
       <lr-config
         ctx-name="my-uploader"
-        pubkey="a9428ff5ff90ae7a64eb"
+        pubkey="820573b10a66c0aeebf0"
       />
 
       <lr-file-uploader-regular

@@ -1,4 +1,4 @@
-//import { ConnectionProviderProps } from '@/providers/connections-provider'
+import { ConnectionProviderProps } from '@/providers/connections-provider'
 import { z } from 'zod'
 
 export const EditUserProfileSchema = z.object({
@@ -17,7 +17,7 @@ export type Connection = {
   title: ConnectionTypes
   description: string
   image: string
-  //connectionKey: keyof ConnectionProviderProps
+  connectionKey: keyof ConnectionProviderProps
   accessTokenKey?: string
   alwaysTrue?: boolean
   slackSpecial?: boolean
