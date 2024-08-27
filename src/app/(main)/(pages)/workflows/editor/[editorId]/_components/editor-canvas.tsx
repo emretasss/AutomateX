@@ -2,7 +2,7 @@
 import { EditorCanvasCardType, EditorNodeType } from '@/lib/types'
 import { useEditor } from '@/providers/editor-provider'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import ReactFlow, {
+import  {ReactFlow,
   Background,
   Connection,
   Controls,
@@ -14,8 +14,8 @@ import ReactFlow, {
   applyNodeChanges,
   applyEdgeChanges,
   addEdge,
-} from 'reactflow'
-import 'reactflow/dist/style.css'
+} from '@xyflow/react'
+import '@xyflow/react/dist/style.css';
 import EditorCanvasCardSingle from './editor-canvas-card-single'
 import {
   ResizableHandle,
